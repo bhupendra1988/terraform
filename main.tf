@@ -24,3 +24,7 @@ resource "aws_vpc" "myvpc" {
    Name = "${var.mymap["Key1"]}"
   }
 }
+
+output "VPCID" {
+ value = "${aws_vpc.myvpc.id}"
+}
